@@ -1,6 +1,6 @@
 import { uploadPhoto, createUser } from './utils.js';
 
-function handleProfileSignup() {
+export default function handleProfileSignup() {
   uploadPhoto.then(() => {
     console.log('body ');
   });
