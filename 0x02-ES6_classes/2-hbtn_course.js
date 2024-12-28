@@ -37,7 +37,7 @@ export default class ALXCourse {
     if (newStudents instanceof Array) {
       this._students = newStudents;
     } else {
-      throw new TypeError('Students must be an arrau');
+      throw new TypeError('Students must be an array');
     }
   }
 }
