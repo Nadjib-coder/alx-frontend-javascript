@@ -28,5 +28,7 @@ export default class Currency {
     }
   }
 
-  displayFullCurrency() {}
+  displayFullCurrency() {
+    return `${this.name} (${this.code})`;
+  }
 }
