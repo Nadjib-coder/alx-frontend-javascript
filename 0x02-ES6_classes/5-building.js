@@ -12,12 +12,12 @@ export default class Building {
   }
 
   get sqft() {
-    return this._newSqft;
+    return this._sqft;
   }
 
   set sqft(newSqft) {
     if (typeof newSqft === 'number') {
-      this._newSqft = newSqft;
+      this._sqft = newSqft;
     } else {
       throw new TypeError('Sqft must be a number');
     }
