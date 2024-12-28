@@ -12,6 +12,8 @@ export default class ALXCourse {
   set name(newName) {
     if (typeof newName === 'string') {
       this._name = newName;
+    } else {
+      throw new TypeError('Name must be a string');
     }
   }
 
@@ -22,6 +24,8 @@ export default class ALXCourse {
   set length(newLength) {
     if (typeof newLength === 'number') {
       this._length = newLength;
+    } else {
+      throw new TypeError('Length must be a number');
     }
   }
 
@@ -32,6 +36,8 @@ export default class ALXCourse {
   set students(newStudents) {
     if (newStudents instanceof Array) {
       this._students = newStudents;
+    } else {
+      throw new TypeError('Students must be an arrau');
     }
   }
 }
