@@ -4,11 +4,11 @@ export default class Building {
       throw new TypeError('Cannot instantiate an abstract class');
     }
     if (this.evacuationWarningMessage === undefined) {
-      throw new TypeError(
+      throw new Error(
         'Class extending Building must override evacuationWarningMessage',
       );
     }
-    this.sqft = sqft;
+    this._sqft = sqft;
   }
 
   get sqft() {
