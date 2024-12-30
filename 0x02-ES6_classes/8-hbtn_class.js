@@ -27,5 +27,6 @@ export default class ALXClass {
     if (hint === 'string') {
       return this._location;
     }
+    return this;
   }
 }
