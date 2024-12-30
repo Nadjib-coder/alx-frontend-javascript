@@ -1,7 +1,7 @@
 export class ALXClass {
   constructor(year, location) {
-    this.year = year;
-    this.location = location;
+    this._year = year;
+    this._location = location;
   }
 
   get year() {
@@ -12,14 +12,12 @@ export class ALXClass {
     return this._location;
   }
 }
-const class2019 = new ALXClass(2019, 'San Francisco');
-const class2020 = new ALXClass(2020, 'San Francisco');
 
 export class StudentALX {
   constructor(firstName, lastName, alxClass) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.alxClass = alxClass;
+    this._firstName = firstName;
+    this._lastName = lastName;
+    this._alxClass = alxClass;
   }
 
   get fullName() {
@@ -31,10 +29,12 @@ export class StudentALX {
   }
 
   get fullStudentDescription() {
-    return `${self._firstName} ${self._lastName} - ${self._alxClass.year} - ${self._alxClass.location}`;
+    return `${this._firstName} ${this._lastName} - ${this._alxClass.year} - ${this._alxClass.location}`;
   }
 }
 
+const class2019 = new ALXClass(2019, 'San Francisco');
+const class2020 = new ALXClass(2020, 'San Francisco');
 const student1 = new StudentALX('Guillaume', 'Salva', class2020);
 const student2 = new StudentALX('John', 'Doe', class2020);
 const student3 = new StudentALX('Albert', 'Clinton', class2019);
