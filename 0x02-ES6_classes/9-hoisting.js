@@ -29,12 +29,13 @@ export class StudentALX {
   }
 
   get fullStudentDescription() {
-    return `${this._firstName} ${this._lastName} - ${this._alxClass.year} - ${this._alxClass.location}`;
+    return `${this._firstName} ${this._lastName} - \ ${this._alxClass.year} - ${this._alxClass.location}`;
   }
 }
 
 const class2019 = new ALXClass(2019, 'San Francisco');
 const class2020 = new ALXClass(2020, 'San Francisco');
+
 const student1 = new StudentALX('Guillaume', 'Salva', class2020);
 const student2 = new StudentALX('John', 'Doe', class2020);
 const student3 = new StudentALX('Albert', 'Clinton', class2019);
@@ -48,3 +49,5 @@ export const listOfStudents = [
   student4,
   student5,
 ];
+
+export default listOfStudents;
