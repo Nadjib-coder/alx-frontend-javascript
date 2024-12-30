@@ -1,5 +1,3 @@
-import { escape } from 'querystring';
-
 export default class ALXClass {
   constructor(size, location) {
     this.size = size;
